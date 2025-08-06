@@ -32,9 +32,3 @@ jobs:
         env:
           MAVEN_TOKEN: ${{ secrets.MAVEN_TOKEN }}
         run: ./gradlew build publish
-        
-      - name: Upload mod artifact
-        uses: actions/upload-artifact@v4
-          with:
-            name: jars
-            path: ./build/libs/**/*
